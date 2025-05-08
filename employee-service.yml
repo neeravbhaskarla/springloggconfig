@@ -1,0 +1,17 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8061/eureka/
+
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}) [%X{traceId:-}, %X{spanId:-}] %clr(${LOG_LEVEL_PATTERN:-%5p}) %m%n"
+
+server:
+  port: 8090
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+      

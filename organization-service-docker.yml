@@ -1,0 +1,26 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://discovery-service:8061/eureka"
+
+server:
+  port: 8080
+
+logging:
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss}) [%X{traceId:-}, %X{spanId:-}] %clr(${LOG_LEVEL_PATTERN:-%5p}) %m%n"
+
+spring:
+  sleuth:
+    sampler:
+      probability: 1.0
+  zipkin:
+    baseUrl: http://zipkin:9411
+    
+management:
+  tracing:
+    sampling:
+      probabilty: 1.0
+  zipkin:
+    tracing:
+      endpoint: "http://zipkin:9411/api/v2/spans"
