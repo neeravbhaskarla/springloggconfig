@@ -7,8 +7,6 @@ server:
   port: 8080
 
 logging:
-  level:
-    root: DEBUG
   pattern:
     console: "%clr(%d{yyyy-MM-dd HH:mm:ss}) [%X{traceId:-}, %X{spanId:-}] %clr(${LOG_LEVEL_PATTERN:-%5p}) %m%n"
 
