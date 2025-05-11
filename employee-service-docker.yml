@@ -6,10 +6,6 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery-service:8061/eureka/
 
-logging:
-  pattern:
-    console: "%d{yyyy-MM-dd HH:mm:ss} [trace_id: %X{traceId:-}, span_id: %X{spanId:-}] ${LOG_LEVEL_PATTERN:-%5p} %m%n"
-
 spring:
   zipkin:
     baseUrl: http://zipkin:9411
